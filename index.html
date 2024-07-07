@@ -19,11 +19,11 @@
           <a>
             <img src="img/logo-brand.svg" width="60" height="60" alt="Логотип" />
           </a>
-          <button class="nav-btn nav-btn_close">
+          <button id="nav-toggle-btn" class="nav-btn nav-btn_open">
             <span class="visually-hidden"> Закрыть меню</span>
           </button>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav hidden">
           <a href="#about-me">Обо мне</a>
           <a href="#skills">Навыки</a>
           <a href="#interests">Интересы</a>
@@ -155,6 +155,15 @@
     </footer>
   </body>
   <script>
+    document.getElementById("nav-toggle-btn").addEventListener("click", function () {
+      const nav = document.querySelector(".main-nav");
+      nav.classList.toggle("hidden");
+
+      // Toggle button class between 'nav-btn_close' and 'nav-btn_open'
+      this.classList.toggle("nav-btn_close");
+      this.classList.toggle("nav-btn_open");
+    });
+
     document.getElementById("sort-by-name").addEventListener("click", function () {
       sortSkills("name");
     });
