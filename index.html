@@ -37,7 +37,7 @@
             class="main-photo"
             src="img/placeholder-photo.png"
             width="300"
-            height="300"
+            height="250"
             alt="Фотография Михаила Иванова"
           />
           <div class="name">
@@ -67,29 +67,29 @@
             <h2>Мои навыки</h2>
             <div class="skills-button">
               <p>Сортировать</p>
-              <button>по названию</button>
-              <button>по уровню</button>
+              <button id="sort-by-name">по названию</button>
+              <button id="sort-by-level">по уровню</button>
             </div>
           </div>
 
           <dl class="skill-list">
-            <dt class="skill-item skill-item_javascript">js</dt>
+            <dt class="skill-item skill-item_javascript" data-name="js" data-level="80">js</dt>
             <dd class="skill-level">
               <div style="width: 80%">80%</div>
             </dd>
-            <dt class="skill-item skill-item_nodejs">nodejs</dt>
+            <dt class="skill-item skill-item_nodejs" data-name="nodejs" data-level="80">nodejs</dt>
             <dd class="skill-level">
               <div style="width: 80%">80%</div>
             </dd>
-            <dt class="skill-item skill-item_html">html</dt>
+            <dt class="skill-item skill-item_html" data-name="html" data-level="60">html</dt>
             <dd class="skill-level">
               <div style="width: 60%">60%</div>
             </dd>
-            <dt class="skill-item skill-item_css">css</dt>
+            <dt class="skill-item skill-item_css" data-name="css" data-level="70">css</dt>
             <dd class="skill-level">
               <div style="width: 70%">70%</div>
             </dd>
-            <dt class="skill-item skill-item_python">python</dt>
+            <dt class="skill-item skill-item_python" data-name="python" data-level="70">python</dt>
             <dd class="skill-level">
               <div style="width: 70%">70%</div>
             </dd>
@@ -154,4 +154,32 @@
       </div>
     </footer>
   </body>
+  <script>
+    document.getElementById("sort-by-name").addEventListener("click", function () {
+      sortSkills("name");
+    });
+
+    document.getElementById("sort-by-level").addEventListener("click", function () {
+      sortSkills("level");
+    });
+
+    function sortSkills(criteria) {
+      const skillList = document.querySelector(".skill-list");
+      const skills = Array.from(skillList.querySelectorAll("dt"));
+
+      skills.sort((a, b) => {
+        if (criteria === "name") {
+          return a.dataset.name.localeCompare(b.dataset.name);
+        } else if (criteria === "level") {
+          return b.dataset.level - a.dataset.level;
+        }
+      });
+
+      skills.forEach((skill) => {
+        const dd = skill.nextElementSibling;
+        skillList.appendChild(skill);
+        skillList.appendChild(dd);
+      });
+    }
+  </script>
 </html>
