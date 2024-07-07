@@ -98,6 +98,7 @@ button {
   text-transform: lowercase;
   transition: all 0.3s ease;
   line-height: 1;
+  white-space: nowrap;
 }
 
 button:hover {
@@ -138,6 +139,10 @@ ul {
   color: var(--blue);
 }
 
+.nav-btn {
+  display: none;
+}
+
 .main-header {
   display: flex;
   align-items: center;
@@ -145,7 +150,7 @@ ul {
   padding-top: 60px;
 }
 
-.main-header a {
+.main-header-wrap a {
   height: 60px;
 }
 
@@ -266,6 +271,7 @@ ul {
   align-items: baseline;
   gap: 40px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .skills-button {
@@ -342,4 +348,186 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  a,
+  button {
+    font-size: 16px;
+  }
+
+  section {
+    margin-top: 80px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .main-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contacts {
+    margin-bottom: 80px;
+  }
+
+  .contact-link {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  a,
+  button {
+    font-size: 14px;
+  }
+
+  .nav-btn {
+    border: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-btn:hover {
+    background-color: transparent;
+  }
+
+  .nav-btn_close {
+    background-image: url(../img/icon-close.svg);
+  }
+
+  .nav-btn_open {
+    background-image: url(../img/icon-burger.svg);
+  }
+
+  .main-header {
+    padding-top: 20px;
+    gap: 20px;
+  }
+
+  .main-header-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header-wrap img,
+  .main-header-wrap a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-nav a {
+    margin: 10px;
+  }
+
+  .main-header,
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro h1 {
+    margin-bottom: 10px;
+  }
+
+  .main-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  section {
+    margin-top: 50px;
+  }
+
+  .skills-header {
+    margin-bottom: 30px;
+  }
+
+  .contact-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .contacts {
+    margin-bottom: 50px;
+  }
+
+  .contact-list {
+    margin-bottom: 20px;
+  }
+
+  .contacts h2 {
+    margin-bottom: 30px;
+  }
+
+  .main-footer {
+    padding: 30px 0px 30px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .skills-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills-button {
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .skills-button button {
+    width: 100%;
+  }
+
+  .contact-list {
+    flex-direction: column;
+  }
+
+  .social-list {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
