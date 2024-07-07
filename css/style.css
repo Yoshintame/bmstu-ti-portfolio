@@ -126,20 +126,6 @@ ul {
 }
 
 .main-nav {
-  max-height: 250px;
-  opacity: 1;
-  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
-  z-index: -2;
-}
-
-.hidden {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.main-nav {
   display: flex;
 }
 
@@ -423,6 +409,20 @@ ul {
   a,
   button {
     font-size: 14px;
+  }
+
+  .main-nav {
+    max-height: 250px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+    z-index: -2;
+  }
+
+  .hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   }
 
   .nav-btn {
