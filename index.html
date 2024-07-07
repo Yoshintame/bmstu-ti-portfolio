@@ -8,132 +8,145 @@
       name="description"
       content="Портфолио фронтэнд разработчика Михаила Иванова, включающее информацию о его навыках, интересах и контактах."
     />
-    <link rel="stylesheet" href="css/outlines.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <header>
-      <a>
-        <img src="img/logo-brand.svg" width="60" height="60" alt="Логотип" />
-      </a>
-      <nav class="main-nav">
-        <a href="#about-me">Обо мне</a>
-        <a href="#skills">Навыки</a>
-        <a href="#interests">Интересы</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </header>
+    <div class="container">
+      <header class="main-header">
+        <a>
+          <img src="img/logo-brand.svg" width="60" height="60" alt="Логотип" />
+        </a>
+        <nav class="main-nav">
+          <a href="#about-me">Обо мне</a>
+          <a href="#skills">Навыки</a>
+          <a href="#interests">Интересы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </header>
 
-    <main>
-      <section id="intro">
-        <h1>Иванов Михаил</h1>
-        <p>Фронтэнд разработчик</p>
-        <img
-          class="user-photo"
-          src="img/placeholder-photo.png"
-          width="300"
-          height="300"
-          alt="Фотография Михаила Иванова"
-        />
-      </section>
+      <main>
+        <section id="intro" class="intro">
+          <img
+            class="main-photo"
+            src="img/placeholder-photo.png"
+            width="300"
+            height="300"
+            alt="Фотография Михаила Иванова"
+          />
+          <div class="name">
+            <h1>Иванов Михаил</h1>
+            <p class="subtitle">Фронтэнд разработчик</p>
+          </div>
+        </section>
 
-      <section id="about-me">
-        <h2>Пара слов обо мне</h2>
-        <p>Привет ✌️</p>
-        <p>
-          В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычисли­тельная
-          техника».
-        </p>
-        <p>
-          В прошлом году защитил диплом бакалавра на тему «Разработка web-приложения для визуализации сетевой
-          топологии». Работа была высоко оценена комиссией.
-        </p>
-        <p>На данный момент работаю на должности фронтэнд-разработчика в команде крупного банка.</p>
-      </section>
+        <section id="about-me" class="about-me">
+          <h2>Пара слов обо мне</h2>
+          <div class="text-wrapper">
+            <p>Привет ✌️</p>
+            <p>
+              В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и
+              вычисли­тельная техника».
+            </p>
+            <p>
+              В прошлом году защитил диплом бакалавра на тему «Разработка web-приложения для визуализации сетевой
+              топологии». Работа была высоко оценена комиссией.
+            </p>
+            <p>На данный момент работаю на должности фронтэнд-разработчика в команде крупного банка.</p>
+          </div>
+        </section>
 
-      <section id="skills">
-        <h2>Мои навыки</h2>
-        <div>
-          <p>Сортировать</p>
-          <button>по названию</button>
-          <button>по уровню</button>
-        </div>
+        <section id="skills" class="skills">
+          <div class="skills-header">
+            <h2>Мои навыки</h2>
+            <div class="skills-button">
+              <p>Сортировать</p>
+              <button>по названию</button>
+              <button>по уровню</button>
+            </div>
+          </div>
 
-        <dl>
-          <dt>js</dt>
-          <dd>
-            <div style="width: 40%">40%</div>
-          </dd>
-          <dt>nodejs</dt>
-          <dd>
-            <div style="width: 40%">40%</div>
-          </dd>
-          <dt>html</dt>
-          <dd>
-            <div style="width: 40%">40%</div>
-          </dd>
-          <dt>css</dt>
-          <dd>
-            <div style="width: 40%">40%</div>
-          </dd>
-          <dt>python</dt>
-          <dd>
-            <div style="width: 40%">40%</div>
-          </dd>
-        </dl>
-      </section>
+          <dl class="skill-list">
+            <dt class="skill-item skill-item_javascript">js</dt>
+            <dd class="skill-level">
+              <div style="width: 80%">80%</div>
+            </dd>
+            <dt class="skill-item skill-item_nodejs">nodejs</dt>
+            <dd class="skill-level">
+              <div style="width: 80%">80%</div>
+            </dd>
+            <dt class="skill-item skill-item_html">html</dt>
+            <dd class="skill-level">
+              <div style="width: 60%">60%</div>
+            </dd>
+            <dt class="skill-item skill-item_css">css</dt>
+            <dd class="skill-level">
+              <div style="width: 70%">70%</div>
+            </dd>
+            <dt class="skill-item skill-item_python">python</dt>
+            <dd class="skill-level">
+              <div style="width: 70%">70%</div>
+            </dd>
+          </dl>
+        </section>
 
-      <section id="interests">
-        <h2>Мои интересы</h2>
-        <p>
-          Наибольший интерес для меня в данный момент представляет прогрессирование как специалиста в своей профессии,
-          улучшение и расширение своих навыков.
-        </p>
-      </section>
+        <section id="interests" class="interests">
+          <h2>Мои интересы</h2>
+          <div class="text-wrapper">
+            <p>
+              Наибольший интерес для меня в данный момент представляет прогрессирование как специалиста в своей
+              профессии, улучшение и расширение своих навыков.
+            </p>
+          </div>
+        </section>
 
-      <section id="contacts">
-        <h2>Мои контакты</h2>
-        <ul>
-          <li>
-            <a href="tel:+79164567890">+7 916 456-78-90</a>
-          </li>
-          <li>
-            <a href="mailto:m.ivanov0427@gmail.com">m.ivanov0427@gmail.com</a>
-          </li>
-        </ul>
+        <section id="contacts" class="contacts">
+          <h2>Мои контакты</h2>
+          <ul class="contact-list">
+            <li>
+              <a href="tel:+79164567890" class="contact-link contact-link_phone">+7 916 456-78-90</a>
+            </li>
+            <li>
+              <a href="mailto:m.ivanov0427@gmail.com" class="contact-link contact-link_mail">m.ivanov0427@gmail.com</a>
+            </li>
+          </ul>
 
-        <ul class="social">
-          <li>
-            <a href="https://github.com">
-              <span>GitHub</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://gitlab.com">
-              <span>Gitlab</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com">
-              <span>Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://telegram.org">
-              <span>Telegram</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://vk.com">
-              <span>Вконтакте</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
+          <ul class="social-list">
+            <li>
+              <a class="social-link social-link_github" href="https://github.com">
+                <span class="social-text visually-hidden">GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link social-link_gitlab" href="https://gitlab.com">
+                <span class="social-text visually-hidden">Gitlab</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link social-link_instagram" href="https://instagram.com">
+                <span class="social-text visually-hidden">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link social-link_telegram" href="https://telegram.org">
+                <span class="social-text visually-hidden">Telegram</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link social-link_vk" href="https://vk.com">
+                <span class="social-text visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
 
-    <footer>
-      <p>© 2024 Михаил Иванов</p>
+    <footer class="main-footer">
+      <div class="container">
+        <p>© 2024 Михаил Иванов</p>
+      </div>
     </footer>
   </body>
 </html>
