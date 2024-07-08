@@ -189,6 +189,7 @@ ul {
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -234,6 +235,7 @@ ul {
 
 .contact-list {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
   gap: 40px;
 }
@@ -564,7 +566,6 @@ ul {
   }
 
   .social-list {
-    flex-wrap: wrap;
     gap: 15px;
   }
 }
