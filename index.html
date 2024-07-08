@@ -55,10 +55,13 @@
               вычисли­тельная техника».
             </p>
             <p>
-              В прошлом году защитил диплом бакалавра на тему «Разработка web-приложения для визуализации сетевой
-              топологии». Работа была высоко оценена комиссией.
+              В прошлом году защитила диплом бакалавра на тему «Разработка очень сложного программного комплекса для
+              супер-важной цели». Работа была высоко оценена комиссией.
             </p>
-            <p>На данный момент работаю на должности фронтэнд-разработчика в команде крупного банка.</p>
+            <p>
+              Также я уже успела поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать
+              разработчиком сложных программных комплексов и систем.
+            </p>
           </div>
         </section>
 
@@ -89,10 +92,6 @@
             <dd class="skill-level">
               <div style="width: 70%">70%</div>
             </dd>
-            <dt class="skill-item skill-item_python" data-name="python" data-level="70">python</dt>
-            <dd class="skill-level">
-              <div style="width: 70%">70%</div>
-            </dd>
           </dl>
         </section>
 
@@ -100,9 +99,10 @@
           <h2>Мои интересы</h2>
           <div class="text-wrapper">
             <p>
-              Наибольший интерес для меня в данный момент представляет прогрессирование как специалиста в своей
-              профессии, улучшение и расширение своих навыков.
+              Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного
+              интеллекта.
             </p>
+            <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
           </div>
         </section>
 
@@ -154,41 +154,5 @@
       </div>
     </footer>
   </body>
-  <script>
-    document.getElementById("nav-toggle-btn").addEventListener("click", function () {
-      const nav = document.querySelector(".main-nav");
-      nav.classList.toggle("hidden");
-
-      // Toggle button class between 'nav-btn_close' and 'nav-btn_open'
-      this.classList.toggle("nav-btn_close");
-      this.classList.toggle("nav-btn_open");
-    });
-
-    document.getElementById("sort-by-name").addEventListener("click", function () {
-      sortSkills("name");
-    });
-
-    document.getElementById("sort-by-level").addEventListener("click", function () {
-      sortSkills("level");
-    });
-
-    function sortSkills(criteria) {
-      const skillList = document.querySelector(".skill-list");
-      const skills = Array.from(skillList.querySelectorAll("dt"));
-
-      skills.sort((a, b) => {
-        if (criteria === "name") {
-          return a.dataset.name.localeCompare(b.dataset.name);
-        } else if (criteria === "level") {
-          return b.dataset.level - a.dataset.level;
-        }
-      });
-
-      skills.forEach((skill) => {
-        const dd = skill.nextElementSibling;
-        skillList.appendChild(skill);
-        skillList.appendChild(dd);
-      });
-    }
-  </script>
+  <script src="/js/index.js"></script>
 </html>
